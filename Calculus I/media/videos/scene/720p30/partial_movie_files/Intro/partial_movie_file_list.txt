@@ -1,0 +1,12 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/720p30/partial_movie_files/Intro/274514146_4290332951_223132457.mp4'
+file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/720p30/partial_movie_files/Intro/2789044632_1682910897_1582288808.mp4'
+file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/720p30/partial_movie_files/Intro/2789044632_4179249937_1353565080.mp4'
+file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/720p30/partial_movie_files/Intro/2789044632_1138621113_640274045.mp4'
+file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/720p30/partial_movie_files/Intro/2789044632_3277269912_2630773159.mp4'
+file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/720p30/partial_movie_files/Intro/2789044632_2309282170_3400654716.mp4'
+file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/720p30/partial_movie_files/Intro/2789044632_3147407202_3926347984.mp4'
+file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/720p30/partial_movie_files/Intro/2789044632_1189065781_447599216.mp4'
+file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/720p30/partial_movie_files/Intro/2789044632_121390396_1063431731.mp4'
+file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/720p30/partial_movie_files/Intro/2789044632_2074155773_823233973.mp4'
+file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/720p30/partial_movie_files/Intro/2789044632_345352296_1866840283.mp4'
