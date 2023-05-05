@@ -3,9 +3,9 @@ from math import *
 
 class IntroScene(Scene):
     def construct(self):
-        top_text = Tex(r"Welcome to", font_size=72).shift(UP)
-        middle_text = Tex(r"Calculus I", font_size=72).next_to(top_text, DOWN)
-        bottom_text = Tex(r"with Sam Cordry (@samc)", font_size=32).next_to(middle_text, 4 * DOWN)
+        top_text = Tex("Welcome to", font_size=72).shift(UP)
+        middle_text = Tex("Calculus I", font_size=72).next_to(top_text, DOWN)
+        bottom_text = Tex("with Sam Cordry (@samc)", font_size=32).next_to(middle_text, 4 * DOWN)
 
         limit_text = Tex("\\[ \\lim_{h\\to 0} \\frac{f(x + h) - f(x)}{h} \\]").shift(4.5 * LEFT).shift(2.5 * UP)
 
@@ -49,14 +49,6 @@ class IntroScene(Scene):
         self.play(Write(derivative1_text), Write(derivative1_text_copy))
         self.play(Transform(derivative1_text_copy, derivative2_text))
 
-        self.wait(1)
-
-class TableOfContentsScene(Scene):
-    def construct(self):
-        title_text = Tex("Table of Contents").shift(3 * UP)
-
-        items = []
-
 
 class OverwhelmingScene(Scene):
     def construct(self):
@@ -86,9 +78,33 @@ class OverwhelmingScene(Scene):
         self.add(constant_text, linear_text, sine_text, cosine_text, tangent_text, secant_text, cosecant_text, cotangent_text, arcsine_text, arccosine_text, arctangent_text)
         self.add(e_text, exponential_text, ln_text, logarithm_text, const_mult_text, add_sub_text, product_text, quotient_text, chain_text)
 
-class FullVideo(IntroScene, TableOfContentsScene, OverwhelmingScene):
-    def setup(self):
-        IntroScene.construct(self)
-        OverwhelmingScene.construct(self)
-        TableOfContentsScene.construct(self)
 
+class TableOfContentsScene(Scene):
+    def construct(self):
+        title_text = Tex("Table of Contents").shift(3 * UP)
+
+        chapters = []
+        vgroup = VGroup()
+
+        chapters.append(Tex("1. What is Calculus?").next_to(title_text, 5 * DOWN))
+        chapters.append(Tex("2. Derivatives"))
+        chapters.append(Tex("3. Limits"))
+        chapters.append(Tex("4. L'Hopital's Rule"))
+        chapters.append(Tex("5. Applications of Derivatives"))
+        chapters.append(Tex("6. Integrals"))
+        chapters.append(Tex("7. Applications of Integrals"))
+
+        vgroup.add(chapters[0])
+        for i in range(1, 7):
+            chapters[i].next_to(chapters[i - 1], DOWN)
+            vgroup.add(chapters[i])
+        
+        vgroup.arrange(DOWN, center=False, aligned_edge=LEFT)
+
+        self.play(Write(title_text))
+        self.play(Write(vgroup), run_time=12)
+
+
+class WhatIsCalculusScene(Scene):
+    def construct(self):
+        pass

@@ -9,4 +9,3 @@ file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/sce
 file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/2160p60/partial_movie_files/IntroScene/3120117191_1189065781_447599216.mp4'
 file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/2160p60/partial_movie_files/IntroScene/3120117191_121390396_1063431731.mp4'
 file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/2160p60/partial_movie_files/IntroScene/3120117191_1045898974_823233973.mp4'
-file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/2160p60/partial_movie_files/IntroScene/3120117191_345352296_1274830119.mp4'
