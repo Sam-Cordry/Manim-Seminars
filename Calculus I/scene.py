@@ -12,7 +12,7 @@ class IntroScene(Scene):
         derivative1_text = Tex("\( f(x) = x^2 \)", font_size=48).shift(4.5 * RIGHT).shift(2 * DOWN)
         derivative1_text_copy = Tex("\( f(x) = x^2 \)", font_size=48).shift(4.5 * RIGHT).shift(2 * DOWN)
 
-        derivative2_text = Tex("\( df = 2x dx \)", font_size=48).next_to(derivative1_text, DOWN)
+        derivative2_text = Tex("\( df = 2x\ dx \)", font_size=48).next_to(derivative1_text, DOWN)
 
         right_axes = Axes(
             x_range=[-3, 3, 1],
@@ -79,12 +79,11 @@ class OverwhelmingScene(Scene):
         self.add(e_text, exponential_text, ln_text, logarithm_text, const_mult_text, add_sub_text, product_text, quotient_text, chain_text)
 
 
-class TableOfContentsScene(Scene):
+class ContentsScene(Scene):
     def construct(self):
-        title_text = Tex("Table of Contents").shift(3 * UP)
+        title_text = Tex("Content To Cover").shift(3 * UP)
 
         chapters = []
-        vgroup = VGroup()
 
         chapters.append(Tex("1. What is Calculus?").next_to(title_text, 5 * DOWN))
         chapters.append(Tex("2. Derivatives"))
@@ -94,17 +93,20 @@ class TableOfContentsScene(Scene):
         chapters.append(Tex("6. Integrals"))
         chapters.append(Tex("7. Applications of Integrals"))
 
-        vgroup.add(chapters[0])
         for i in range(1, 7):
             chapters[i].next_to(chapters[i - 1], DOWN)
-            vgroup.add(chapters[i])
-        
-        vgroup.arrange(DOWN, center=False, aligned_edge=LEFT)
 
         self.play(Write(title_text))
-        self.play(Write(vgroup), run_time=12)
+        
+        for i in range(7):
+            self.play(Write(chapters[i]))
 
 
-class WhatIsCalculusScene(Scene):
+class Chapter1Scene(Scene):
     def construct(self):
-        pass
+        title = Tex("What is Calculus?")
+        
+        self.play(Write(title))
+        self.wait(1)
+        self.play(Homotopy(lambda x, y, z, t: [x, 3*t + y, z], title, run_time=1))
+        self.wait(1)

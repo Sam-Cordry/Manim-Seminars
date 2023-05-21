@@ -1,39 +1,56 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=latex 2023.4.14)  14 APR 2023 17:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=latex 2023.3.21)  17 MAY 2023 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **media/Tex/b1563303d934faa1.tex
 (./media/Tex/b1563303d934faa1.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex
-/standalone/standalone.cls
+L3 programming layer <2023-02-22>
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/standalone/stand
+alone.cls
 Document Class: standalone 2022/10/10 v1.3b Class to compile TeX sub-files stan
 dalone
-(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/tools/shellesc.s
+ty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
-) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
+)
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/generic/iftex/ifluatex
+.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/generic/iftex/iftex.st
+y
 Package: iftex 2022/02/03 v1.0f TeX engine tests
-)) (/usr/local/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+))
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/xkeyval/xkeyval.
+sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local
-/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/generic/xkeyval/xkeyva
+l.tex
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/generic/xkeyval/xkvuti
+ls.tex
 \XKV@toks=\toks16
 \XKV@tempa@toks=\toks17
-(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/keyval.tex))
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/generic/xkeyval/keyval
+.tex))
 \XKV@depth=\count185
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \sa@internal=\count186
 \c@sapage=\count187
-(/usr/local/texlive/2023/texmf-dist/tex/latex/standalone/standalone.cfg
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/standalone/stand
+alone.cfg
 File: standalone.cfg 2022/10/10 v1.3b Default configuration file for 'standalon
 e' class
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
+)
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
-(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count188
@@ -47,25 +64,37 @@ File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/preview/preview.sty
+)
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/preview/preview.
+sty
 Package: preview 2017/04/24 13.1 (AUCTeX/preview-latex)
-(/usr/local/texlive/2023/texmf-dist/tex/generic/luatex85/luatex85.sty
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/generic/luatex85/luate
+x85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/preview/prtightpage.def
+)
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/preview/prtightp
+age.def
 \PreviewBorder=\dimen141
 )
 \pr@snippet=\count196
 \pr@box=\box51
 \pr@output=\toks18
-)) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
+))
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/generic/babel/babel.st
+y
 Package: babel 2023/02/13 3.86 The Babel package
 \babel@savecnt=\count197
 \U@D=\dimen142
 \l@unhyphenated=\language87
-(/usr/local/texlive/2023/texmf-dist/tex/generic/babel/txtbabel.def)
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/generic/babel/txtbabel
+.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count198
-(/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/generic/babel-english/
+english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
@@ -74,24 +103,34 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language21). Reported on input line 108.
 ))
-(/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.t
-ex
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/generic/babel/locale/e
+n/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/amsmath/amsmath.
+sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
 \@mathmargin=\skip50
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/amsmath/amstext.
+sty
 Package: amstext 2021/08/26 v2.01 AMS text
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/amsmath/amsgen.s
+ty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
 \ex@=\dimen143
-)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/amsmath/amsbsy.s
+ty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen144
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/amsmath/amsopn.s
+ty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count199
@@ -141,16 +180,22 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/amsfonts/amssymb
+.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/amsfonts/amsfont
+s.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+))
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/l3backend/l3back
+end-dvips.def
 File: l3backend-dvips.def 2023-01-16 L3 backend support: dvips
 \l__pdf_internal_box=\box54
 \g__pdf_backend_object_int=\count277
@@ -180,19 +225,21 @@ LaTeX Font Info:    ... okay on input line 7.
 Preview: Fontsize 10pt
 LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
 
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
 
-(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+(/usr/local/Cellar/texlive/20230313/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Preview: Tightpage 0 0 0 0
 [1] (media/Tex/b1563303d934faa1.aux) ) 
 Here is how much of TeX's memory you used:
  3430 strings out of 476026
- 56456 string characters out of 5790043
+ 57621 string characters out of 5781557
  1850385 words of memory out of 5000000
  23871 multiletter control sequences out of 15000+600000
  513986 words of font info for 40 fonts, out of 8000000 for 9000

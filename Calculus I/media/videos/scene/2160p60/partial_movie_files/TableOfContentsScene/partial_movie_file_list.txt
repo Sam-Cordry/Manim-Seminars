@@ -1,3 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/2160p60/partial_movie_files/TableOfContentsScene/139003253_2823628712_223132457.mp4'
-file 'file:/Users/samcordry/Manim Technical Seminars/Calculus I/media/videos/scene/2160p60/partial_movie_files/TableOfContentsScene/3120117191_2149080677_1025655530.mp4'
