@@ -104,9 +104,109 @@ class ContentsScene(Scene):
 
 class Chapter1Scene(Scene):
     def construct(self):
+        chapter = Tex("\\underline{Chapter 1}").shift(UP)
         title = Tex("What is Calculus?")
+        self.play(Write(chapter))
+        self.play(Write(title))
+
+        self.wait(1)
+        self.play(Homotopy(MoveUp3Munits, title, run_time=1.5), FadeOut(chapter), run_time=.5)
+        self.wait(10)
         
+        numberLine = NumberLine(
+            x_range=[0, 5, 1],
+            length=10,
+            include_numbers=True
+        ).shift(DOWN)
+        car = SVGMobject(file_name="car.svg", height=1, fill_color=WHITE, stroke_color=BLACK).align_to(numberLine, LEFT).shift(LEFT)
+
+        self.play(Create(numberLine))
+
+        self.play(Create(car))
+        self.play(Homotopy(MoveCar, car, run_time=3))
+
+        time = Tex("3 seconds").shift(2 * DOWN)
+        self.play(Write(time))
+
+        group = VGroup(numberLine, car, time)
+        group.generate_target()
+        group.target.scale(.5)
+        group.target.shift(3.5 * LEFT + 2 * UP)
+
+        self.play(MoveToTarget(group))
+
+        can_do = Tex("What you know how to do:", font_size=12).next_to(group).shift(UP + RIGHT)
+
+        self.play(Write(can_do))
+
+        average_velocity = Tex("Average Velocity:").next_to(group).shift(RIGHT)
+        avg_velocity = Tex("\( \\frac{\\Delta x}{\\Delta t} \)").next_to(average_velocity).shift(RIGHT)
+        answer = Tex("\( = \\frac{5}{3} \\frac{\\text{meters}}{\\text{seconds}} \)").next_to(avg_velocity, RIGHT)
+
+        self.play(Write(average_velocity))
+        self.play(Write(avg_velocity))
+        self.play(Write(answer))
+
+        question1 = Tex("How fast is the car moving at t = 2 seconds?").shift(DOWN)
+        question2 = Tex("Is the car ever moving faster than 5/3 m/s?").shift(2 * DOWN)
+
+        self.play(Write(question1, run_time=3))
+        self.play(Write(question2, run_time=3))
+
+        self.play(FadeOut(group), FadeOut(avg_velocity), FadeOut(answer), FadeOut(question1), FadeOut(question2), run_time=2)
+
+        self.wait(3)
+
+class Chapter2Scene(Scene):
+    def construct(self):
+        title = Tex("Derivatives")
         self.play(Write(title))
         self.wait(1)
-        self.play(Homotopy(lambda x, y, z, t: [x, 3*t + y, z], title, run_time=1))
+        self.play(Homotopy(MoveUp3Munits, title, run_time=1))
         self.wait(1)
+
+class Chapter3Scene(Scene):
+    def construct(self):
+        title = Tex("Limits")
+        self.play(Write(title))
+        self.wait(1)
+        self.play(Homotopy(MoveUp3Munits, title, run_time=1))
+        self.wait(1)
+
+class Chapter4Scene(Scene):
+    def construct(self):
+        title = Tex("l'Hopital's Rule")
+        self.play(Write(title))
+        self.wait(1)
+        self.play(Homotopy(MoveUp3Munits, title, run_time=1))
+        self.wait(1)
+
+class Chapter5Scene(Scene):
+    def construct(self):
+        title = Tex("Applications of Derivatives")
+        self.play(Write(title))
+        self.wait(1)
+        self.play(Homotopy(MoveUp3Munits, title, run_time=1))
+        self.wait(1)
+
+class Chapter6Scene(Scene):
+    def construct(self):
+        title = Tex("Integrals")
+        self.play(Write(title))
+        self.wait(1)
+        self.play(Homotopy(MoveUp3Munits, title, run_time=1))
+        self.wait(1)
+
+class Chapter7Scene(Scene):
+    def construct(self):
+        title = Tex("Applications of Integrals")
+        self.play(Write(title))
+        self.wait(1)
+        self.play(Homotopy(MoveUp3Munits, title, run_time=1))
+        self.wait(1)
+
+def MoveUp3Munits(x, y, z, t):
+    return [x, 3 * t + y, z]
+
+def MoveCar(x, y, z, t):
+    return [(t ** 2) * 10 + x, y, z]
