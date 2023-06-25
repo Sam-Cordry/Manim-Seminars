@@ -147,11 +147,15 @@ class Chapter1Scene(Scene):
         self.play(Write(avg_velocity))
         self.play(Write(answer))
 
-        question1 = Tex("How fast is the car moving at t = 2 seconds?").shift(DOWN)
-        question2 = Tex("Is the car ever moving faster than 5/3 m/s?").shift(2 * DOWN)
+        questionHeader = Tex("What you don't know how to do (yet):").shift(DOWN)
+        question1 = Tex("How fast is the car moving at t = 2 seconds?").shift(2 * DOWN)
+        question2 = Tex("Is the car ever moving faster than 5/3 m/s?").shift(3 * DOWN)
+        question3 = Tex("How far has the car gone after 3 seconds?").shift(4 * DOWN)
 
+        self.play(Write(questionHeader, run_time=3))
         self.play(Write(question1, run_time=3))
         self.play(Write(question2, run_time=3))
+        self.play(Write(question3, run_time=3))
 
         self.play(FadeOut(group), FadeOut(avg_velocity), FadeOut(answer), FadeOut(question1), FadeOut(question2), run_time=2)
 
@@ -159,11 +163,83 @@ class Chapter1Scene(Scene):
 
 class Chapter2Scene(Scene):
     def construct(self):
+        chapter = Tex("\\underline{Chapter 2}").shift(UP)
         title = Tex("Derivatives")
+        self.play(Write(chapter))
         self.play(Write(title))
+
         self.wait(1)
-        self.play(Homotopy(MoveUp3Munits, title, run_time=1))
-        self.wait(1)
+        self.play(Homotopy(MoveUp3Munits, title, run_time=1.5), FadeOut(chapter, run_time=.5))
+        self.wait(10)
+
+        numberLine = NumberLine(
+            x_range=[0, 5, 1],
+            length=10,
+            include_numbers=True
+        ).shift(DOWN)
+        car = SVGMobject(file_name="car.svg", height=1, fill_color=WHITE, stroke_color=BLACK).align_to(numberLine, LEFT).shift(LEFT)
+        time = Tex("3 seconds").shift(2 * DOWN)
+
+        group = VGroup(numberLine, car, time)
+        group.generate_target()
+        group.target.scale(.5)
+        group.target.shift(2 * UP)
+
+        self.play(Create(numberLine))
+        self.play(Create(car))
+        self.play(Write(time))
+
+        axes1 = Axes(
+            x_range=[0, 5, 1],
+            y_range=[0, 25, 5],
+            length=10,
+            include_numbers=True,
+            tips=False
+        ).shift(2 * DOWN)
+        graph1 = axes1.get_graph(lambda x: x ** 2, x_range=[0, 5], color=BLUE)
+        labels1 = axes1.get_axis_labels(x_label="Time (s)", y_label="Distance (m)")
+
+        self.play(Create(axes1))
+        self.play(Create (labels1))
+        self.play(Create(graph1))
+
+        self.play(axes1.animate.shift(2 * LEFT), graph1.animate.shift(2 * LEFT))
+
+        arrow = Arrow(start=LEFT, end=RIGHT)
+
+        self.play(Create(arrow))
+
+        axes2 = Axes(
+            x_range=[0, 5, 1],
+            y_range=[0, 10, 2],
+            length=10,
+            include_numbers=True,
+            tips=False
+        ).shift(2 * DOWN)
+        graph2 = axes2.get_graph(lambda x: 2 * x, x_range=[0, 5], color=BLUE)
+        labels2 = axes2.get_axis_labels(x_label="Time (s)", y_label="Velocity (m/s)")
+
+        self.play(Create(axes2))
+        self.play(Create(labels2))
+        self.play(Create(graph2))
+
+        function1 = Tex("\( x(t) = x^2 \)").next_to(graph1, DOWN)
+        function2 = Tex("\( v(t) = 2x \)").next_to(graph2, DOWN)
+
+        self.play(Write(function1))
+        self.play(Write(function2))
+
+        self.wait(30)
+
+        self.play(FadeOut(group), FadeOut(function1), FadeOut(function2), FadeOut(arrow), FadeOut(axes1), FadeOut(axes2), FadeOut(graph1), FadeOut(graph2), FadeOut(labels1), FadeOut(labels2), run_time=2)
+
+        definition = Tex("Derivatives define the rate of change of a function over a near instantaneous point in time.").shift(2 * UP)
+        self.play(Write(definition))
+        self.wait(10)
+
+        self.play(Create(axes1), Create(labels1), Create(graph1), Create(axes2), Create(labels2), Create(graph2), Create(arrow), run_time=3)
+        
+        self.wait(3)
 
 class Chapter3Scene(Scene):
     def construct(self):
@@ -175,7 +251,7 @@ class Chapter3Scene(Scene):
 
 class Chapter4Scene(Scene):
     def construct(self):
-        title = Tex("l'Hopital's Rule")
+        title = Tex("L'Hopital's Rule")
         self.play(Write(title))
         self.wait(1)
         self.play(Homotopy(MoveUp3Munits, title, run_time=1))
@@ -205,8 +281,15 @@ class Chapter7Scene(Scene):
         self.play(Homotopy(MoveUp3Munits, title, run_time=1))
         self.wait(1)
 
+class OutroScene(Scene):
+    def construct(self):
+        pass
+
 def MoveUp3Munits(x, y, z, t):
     return [x, 3 * t + y, z]
 
 def MoveCar(x, y, z, t):
     return [(t ** 2) * 10 + x, y, z]
+
+def MoveSmallCar(x, y, z, t):
+    return [(t ** 2) * 5 + x, y, z]
