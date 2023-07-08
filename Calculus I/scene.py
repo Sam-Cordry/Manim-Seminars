@@ -238,6 +238,18 @@ class Chapter2Scene(Scene):
         self.wait(10)
 
         self.play(Create(axes1), Create(labels1), Create(graph1), Create(axes2), Create(labels2), Create(graph2), Create(arrow), run_time=3)
+        self.wait(3)
+        self.play(Write(function1))
+        self.wait(3)
+        self.play(Write(function2))
+
+        avg_velocity = Tex("Average Velocity: \( \\frac{\\Delta x}{\\Delta t} \)").next_to(function1, DOWN)
+        avg_velocity_graph = Tex("From the Graph: \( \\frac{\\Delta y}{\\Delta x} \)").next_to(avg_velocity, DOWN)
+
+        self.play(Write(avg_velocity))
+        self.wait(5)
+        self.play(Write(avg_velocity_graph))
+        self.wait(5)
         
         self.wait(3)
 
